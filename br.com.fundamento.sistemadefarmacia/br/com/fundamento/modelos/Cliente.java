@@ -3,7 +3,7 @@ package br.com.fundamento.modelos;
 public class Cliente {
     
 	private int id;
-	private Cidade nome;
+	private String nome;
 	private String cpf;
 	private Endereco endereco;
     
@@ -17,11 +17,11 @@ public class Cliente {
 		this.id = id;
 	}
 
-	public Cidade getNome() {
+	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(Cidade nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 

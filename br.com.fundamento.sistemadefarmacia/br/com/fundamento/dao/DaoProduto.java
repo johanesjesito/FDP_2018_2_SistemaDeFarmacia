@@ -18,28 +18,27 @@ public class DaoProduto implements IDaoProduto {
     private PreparedStatement statement;
     private ResultSet result;
 
-    @Override
-    public void salvar(Produto produto) {
-
-        try {
-            this.conexao = SQLConections.getInstance();
-            this.statement = this.conexao.prepareStatement(SQLUtil.Produto.INSERT);
-            this.statement.setString(1, produto.getNome());
-            this.statement.setString(2, produto.getCodigo());
-            this.statement.setString(3, produto.getFabricante());
-            this.statement.setString(4, produto.getFinalidade());
-            this.statement.setFloat(5, produto.getPreco());
-            this.result = this.statement.executeQuery();
-            int id = 0;
-            if (result.next()) {
-                id = result.getInt(1);
-            }
-            this.statement.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(DaoProduto.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }
+	@Override
+	public int salvar(Produto produto) {
+		int id = 0;
+		try {
+			this.conexao = SQLConections.getInstance();
+			this.statement = this.conexao.prepareStatement(SQLUtil.Produto.INSERT);
+			this.statement.setString(1, produto.getNome());
+			this.statement.setString(2, produto.getCodigo());
+			this.statement.setString(3, produto.getFabricante());
+			this.statement.setString(4, produto.getFinalidade());
+			this.statement.setFloat(5, produto.getPreco());
+			this.result = this.statement.executeQuery();
+			if (result.next()) {
+				id = result.getInt(1);
+			}
+			this.statement.close();
+		} catch (SQLException ex) {
+			Logger.getLogger(DaoProduto.class.getName()).log(Level.SEVERE, null, ex);
+		}
+		return id;
+	}
 
     @Override
     public Produto buscarPorId(int id) {

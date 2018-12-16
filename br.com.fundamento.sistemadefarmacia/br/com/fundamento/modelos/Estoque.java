@@ -4,7 +4,7 @@ public class Estoque {
 	
 	private int id;
 	private int quantidade;
-	private Produto produtos;
+	private Produto produto;
 	
 	public Estoque() {}
 
@@ -24,12 +24,12 @@ public class Estoque {
 		this.quantidade = quantidade;
 	}
 
-	public Produto getProdutos() {
-		return produtos;
+	public Produto getProduto() {
+		return produto;
 	}
 
-	public void setProdutos(Produto produtos) {
-		this.produtos = produtos;
+	public void setProdutos(Produto produto) {
+		this.produto = produto;
 	}
 
 }

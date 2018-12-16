@@ -6,7 +6,7 @@ import br.com.fundamento.modelos.EnderecoFarmacia;
 
 public interface IDaoEnderecoFarmacia {
 	
-    public void salvar(EnderecoFarmacia enderecofarmacia);
+    public int salvar(EnderecoFarmacia enderecofarmacia);
     public EnderecoFarmacia buscarPorId(int id);
     public List<EnderecoFarmacia> getAll();
     public void editar(EnderecoFarmacia enderecofarmacia);

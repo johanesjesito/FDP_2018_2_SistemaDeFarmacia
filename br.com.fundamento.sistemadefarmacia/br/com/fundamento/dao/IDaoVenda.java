@@ -6,7 +6,7 @@ import br.com.fundamento.modelos.Venda;
 
 public interface IDaoVenda {
 	
-    public void salvar(Venda venda);
+    public int salvar(Venda venda);
     public Venda buscarPorId(int id);
     public List<Venda> getAll();
     public void editar(Venda venda);

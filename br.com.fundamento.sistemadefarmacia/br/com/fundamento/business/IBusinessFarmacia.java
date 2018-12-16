@@ -6,7 +6,7 @@ import br.com.fundamento.modelos.Farmacia;
 
 public interface IBusinessFarmacia {
 
-    public void salvar(Farmacia farmacia);
+    public int salvar(Farmacia farmacia);
     public Farmacia buscarPorId(int id);
     public List<Farmacia> getAll();
     public void editar(Farmacia farmacia);

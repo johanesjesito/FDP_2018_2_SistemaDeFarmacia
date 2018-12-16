@@ -6,7 +6,7 @@ import br.com.fundamento.modelos.Reserva;
 
 public interface IDaoReserva {
 	
-    public void salvar(Reserva reserva);
+    public int salvar(Reserva reserva);
     public Reserva buscarPorId(int id);
     public List<Reserva> getAll();
     public void editar(Reserva reserva);

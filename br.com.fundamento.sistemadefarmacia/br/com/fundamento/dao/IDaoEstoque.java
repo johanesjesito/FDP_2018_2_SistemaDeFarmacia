@@ -6,7 +6,7 @@ import br.com.fundamento.modelos.Estoque;
 
 public interface IDaoEstoque {
 	
-    public void salvar(Estoque estoque);
+    public int salvar(Estoque estoque);
     public Estoque buscarPorId(int id);
     public List<Estoque> getAll();
     public void editar(Estoque estoque);
