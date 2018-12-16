@@ -19,7 +19,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.Font;
 
-public class Funcionario extends JFrame {
+public class Funcionario2 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -35,7 +35,7 @@ public class Funcionario extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Funcionario frame = new Funcionario();
+					Funcionario2 frame = new Funcionario2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,12 +47,12 @@ public class Funcionario extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Funcionario() {
+	public Funcionario2() {
 		setTitle("Funcionario");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Funcionario.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-capslock-button.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Funcionario2.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-capslock-button.png")));
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 350, 350);
+		setBounds(100, 100, 600, 350);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -115,27 +115,28 @@ public class Funcionario extends JFrame {
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(lblMedicamento)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 151, GroupLayout.PREFERRED_SIZE))
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-							.addGroup(gl_contentPane.createSequentialGroup()
-								.addComponent(lblPreco)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(textField_3, GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))
-							.addGroup(gl_contentPane.createSequentialGroup()
-								.addComponent(lblValidade)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(textField_2, GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE))
-							.addGroup(gl_contentPane.createSequentialGroup()
-								.addComponent(lblQuantidade)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addComponent(textField_1, GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))
-							.addGroup(gl_contentPane.createSequentialGroup()
-								.addComponent(lblEmpresa)
-								.addPreferredGap(ComponentPlacement.RELATED)
-								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-									.addComponent(btnCadastrar)
-									.addComponent(textField_4, GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)))))
+							.addComponent(textField, GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(lblPreco)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(textField_3, GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(lblValidade)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(textField_2, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(lblQuantidade)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(textField_1, GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addComponent(lblEmpresa)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(textField_4, GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)))
 					.addGap(56))
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addContainerGap(254, Short.MAX_VALUE)
+					.addComponent(btnCadastrar)
+					.addGap(241))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)

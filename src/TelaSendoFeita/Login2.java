@@ -19,7 +19,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 
-public class Login extends JFrame {
+public class Login2 extends JFrame {
 
 	/**
 	 * 
@@ -36,7 +36,7 @@ public class Login extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Login frame = new Login();
+					Login2 frame = new Login2();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,13 +48,13 @@ public class Login extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Login() {
+	public Login2() {
 		setBackground(Color.LIGHT_GRAY);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-capslock-button.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Login2.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-capslock-button.png")));
 		setTitle("Sistema De Farmacia");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 350, 350);
+		setBounds(100, 100, 600, 350);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -91,26 +91,26 @@ public class Login extends JFrame {
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addContainerGap(219, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(87)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 								.addComponent(lblLogin, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
 								.addComponent(lblSenha))
 							.addPreferredGap(ComponentPlacement.UNRELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
 								.addComponent(textField, Alignment.LEADING)
-								.addComponent(txtSenha, Alignment.LEADING)))
+								.addComponent(txtSenha, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(130)
+							.addGap(43)
 							.addComponent(btnEntrar)))
-					.addContainerGap(79, Short.MAX_VALUE))
+					.addGap(197))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(109, Short.MAX_VALUE)
+					.addContainerGap(111, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(textField, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblLogin, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE))
@@ -120,7 +120,7 @@ public class Login extends JFrame {
 						.addComponent(lblSenha))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addComponent(btnEntrar)
-					.addGap(100))
+					.addGap(98))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
