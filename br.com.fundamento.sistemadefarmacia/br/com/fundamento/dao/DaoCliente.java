@@ -25,7 +25,7 @@ public class DaoCliente implements IDaoCliente {
 		try {
 			int id_endereco = this.daoEndereco.salvar(cliente.getEndereco());
             this.conexao = SQLConections.getInstance();
-            this.statement = this.conexao.prepareStatement(SQLUtil.Endereco.INSERT);
+            this.statement = this.conexao.prepareStatement(SQLUtil.Cliente.INSERT);
             this.statement.setString(1, cliente.getNome());
             this.statement.setString(2, cliente.getCpf());
             this.statement.setInt(3, id_endereco);

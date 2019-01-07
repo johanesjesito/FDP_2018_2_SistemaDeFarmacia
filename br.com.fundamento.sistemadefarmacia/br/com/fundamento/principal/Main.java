@@ -16,7 +16,7 @@ import br.com.fundamento.modelos.Endereco;
 import br.com.fundamento.modelos.Funcionario;
 import br.com.fundamento.modelos.Produto;
 import br.com.fundamento.modelos.Rua;
-import br.com.fundamento.visao.Login;
+import br.com.fundamento.visao.Login1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,9 +102,7 @@ public class Main {
 
         //fachada1.salvarRua(rua);
         //fachada1.salvarFuncionario(funcionario);
-        
-        Login login = new Login();
-        Controller controller = new Controller(login);
+
                 
     }
 

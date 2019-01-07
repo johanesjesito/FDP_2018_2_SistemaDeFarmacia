@@ -9,7 +9,7 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class Login extends JFrame {
+public class Login1 extends JFrame {
 	
 	/**
 	 * 
@@ -20,7 +20,7 @@ public class Login extends JFrame {
 	private JLabel loginLabel, senhaLabel;
 	private JButton entrarButton;
 
-	public Login() {
+	public Login1() {
 		super("Login");
 		// TODO Auto-generated constructor stub
 		

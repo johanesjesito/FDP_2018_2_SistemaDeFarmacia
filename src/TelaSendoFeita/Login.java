@@ -19,7 +19,7 @@ import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 
-public class Login2 extends JFrame {
+public class Login extends JFrame {
 
 	/**
 	 * 
@@ -36,7 +36,7 @@ public class Login2 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Login2 frame = new Login2();
+					Login frame = new Login();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,9 +48,9 @@ public class Login2 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Login2() {
+	public Login() {
 		setBackground(Color.LIGHT_GRAY);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Login2.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-capslock-button.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Login.class.getResource("/com/sun/javafx/scene/control/skin/caspian/fxvk-capslock-button.png")));
 		setTitle("Sistema De Farmacia");
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
