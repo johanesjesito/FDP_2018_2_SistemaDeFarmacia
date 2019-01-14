@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
@@ -24,6 +25,7 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
@@ -54,10 +56,10 @@ public class Tela extends JFrame {
 //	private JTextField textField_8;
 //	private JTextField textField_9;
 	private JTextField textField_10;
-	private JTextField textField_11;
+//	private JTextField textField_11;
 	private JTextField textField_12;
 	private JTextField textField_13;
-	private JTextField textField_14;
+//	private JTextField textField_14;
 //	private JTextField textField_15;
 //	private JTextField textField_16;
 	private JTextField textField_17;
@@ -75,8 +77,10 @@ public class Tela extends JFrame {
 	private JComboBox comboBox_1;
 	private JComboBox comboBox_2;
 	private JComboBox comboBox_3;
+	private JComboBox empresa;
 	
 	private JSpinner spinner;
+	private JSpinner spinner2;
 	
 	JMenu menu;
 	JMenu menu_2;
@@ -103,7 +107,7 @@ public class Tela extends JFrame {
 	private JLabel lblCidade, lblRua, lblCep, lblCep_1, lblProduto, lblQuantidade, lblPreco, lblLista, lblVenda;
 	private JLabel lblDinheiro, lblMedicamento, lblQuantidade_1, lblFinalidade, lblPreco_1, lblEmpresa, lblPesquisa;
 	private JLabel lblPesquisa_1, lblNome_1, lblCpf_1, lblCidade_1, lblRua_1, lblCep_2, lblCep_3, lblCliente;
-	private JLabel lblFuno, lblNumero, lblCodigo, lblNumero_1, lblCliente_1;
+	private JLabel lblFuno, lblNumero, lblCodigo, lblNumero_1, lblCliente_1, lblIcone;
 	
 	private JButton btnCadastrar;
 	private JButton btnEntrar;
@@ -114,27 +118,6 @@ public class Tela extends JFrame {
 	private JButton btnPesquisar_1;
 	private JButton btnCadastrar_3;
 
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Tela frame = new Tela();
-					new Controller(frame);
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public Tela() {
 		
 		try {
@@ -191,7 +174,7 @@ public class Tela extends JFrame {
 		lblSenha = new JLabel("Senha: ");
 		lblSenha.setFont(new Font("Arial", Font.BOLD, 12));
 		
-		txtSenha = new JTextField();
+		txtSenha = new JPasswordField();
 		txtSenha.setFont(new Font("Arial", Font.PLAIN, 12));
 		txtSenha.setColumns(10);
 		
@@ -201,6 +184,9 @@ public class Tela extends JFrame {
 		textField = new JTextField();
 		textField.setFont(new Font("Arial", Font.PLAIN, 12));
 		textField.setColumns(10);
+		
+		lblIcone = new JLabel("");
+		lblIcone.setIcon(new ImageIcon("arquivos/icone-perfil.png"));
 		
 		btnEntrar = new JButton("Entrar");
 		btnEntrar.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -337,8 +323,10 @@ public class Tela extends JFrame {
 		lblEmpresa = new JLabel("Fonecedor:");
 		lblEmpresa.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		textField_11 = new JTextField();
-		textField_11.setColumns(10);
+//		textField_11 = new JTextField();
+//		textField_11.setColumns(10);
+				
+		spinner2 = new JSpinner();
 		
 		textField_12 = new JTextField();
 		textField_12.setColumns(10);
@@ -346,8 +334,12 @@ public class Tela extends JFrame {
 		textField_13 = new JTextField();
 		textField_13.setColumns(10);
 		
-		textField_14 = new JTextField();
-		textField_14.setColumns(10);
+//		textField_14 = new JTextField();
+//		textField_14.setColumns(10);
+		
+		empresa = new JComboBox();
+		empresa.setSelectedIndex(-1);
+		empresa.setEditable(true);
 		
 		lblCodigo = new JLabel("Codigo:");
 		lblCodigo.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -602,10 +594,10 @@ public class Tela extends JFrame {
 							.addGap(12)
 							.addComponent(lblQuantidade_1)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(textField_11, GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE))
+							.addComponent(spinner2, GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE))
 						.addComponent(textField_10)
 						.addComponent(textField_12)
-						.addComponent(textField_14, GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE))
+						.addComponent(empresa, GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE))
 					.addGap(70))
 				.addGroup(Alignment.LEADING, produtoTela.createSequentialGroup()
 					.addGap(240)
@@ -623,7 +615,7 @@ public class Tela extends JFrame {
 					.addGroup(produtoTela.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblCodigo)
 						.addComponent(textField_25, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(textField_11, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(spinner2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textField_13, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblPreco_1)
 						.addComponent(lblQuantidade_1))
@@ -634,7 +626,7 @@ public class Tela extends JFrame {
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(produtoTela.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblEmpresa)
-						.addComponent(textField_14, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(empresa, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(46)
 					.addComponent(btnCadastrar_1)
 					.addContainerGap(70, Short.MAX_VALUE))
@@ -707,9 +699,9 @@ public class Tela extends JFrame {
 		
 		loginTela = new GroupLayout(contentPane);
 		loginTela.setHorizontalGroup(
-			loginTela.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, loginTela.createSequentialGroup()
-					.addContainerGap(219, Short.MAX_VALUE)
+			loginTela.createParallelGroup(Alignment.TRAILING)
+				.addGroup(loginTela.createSequentialGroup()
+					.addContainerGap(208, Short.MAX_VALUE)
 					.addGroup(loginTela.createParallelGroup(Alignment.LEADING)
 						.addGroup(loginTela.createSequentialGroup()
 							.addGroup(loginTela.createParallelGroup(Alignment.TRAILING)
@@ -718,16 +710,19 @@ public class Tela extends JFrame {
 							.addPreferredGap(ComponentPlacement.UNRELATED)
 							.addGroup(loginTela.createParallelGroup(Alignment.TRAILING, false)
 								.addComponent(textField, Alignment.LEADING)
-								.addComponent(txtSenha, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-						.addGroup(loginTela.createSequentialGroup()
-							.addGap(43)
-							.addComponent(btnEntrar)))
-					.addGap(197))
+								.addComponent(txtSenha, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(btnEntrar, Alignment.LEADING))
+							.addGap(197))
+						.addGroup(Alignment.TRAILING, loginTela.createSequentialGroup()
+							.addComponent(lblIcone)
+							.addGap(206))))
 		);
 		loginTela.setVerticalGroup(
 			loginTela.createParallelGroup(Alignment.TRAILING)
 				.addGroup(loginTela.createSequentialGroup()
-					.addContainerGap(111, Short.MAX_VALUE)
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addComponent(lblIcone)
+					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(loginTela.createParallelGroup(Alignment.BASELINE)
 						.addComponent(textField, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblLogin, GroupLayout.PREFERRED_SIZE, 15, GroupLayout.PREFERRED_SIZE))
@@ -901,9 +896,9 @@ public class Tela extends JFrame {
 		return textField_10;
 	}
 
-	public JTextField getTextField_11() {
-		return textField_11;
-	}
+//	public JTextField getTextField_11() {
+//		return textField_11;
+//	}
 
 	public JTextField getTextField_12() {
 		return textField_12;
@@ -913,9 +908,9 @@ public class Tela extends JFrame {
 		return textField_13;
 	}
 
-	public JTextField getTextField_14() {
-		return textField_14;
-	}
+//	public JTextField getTextField_14() {
+//		return textField_14;
+//	}
 
 	public JMenuItem getMenuItem_6() {
 		return menuItem_6;
@@ -1260,7 +1255,17 @@ public class Tela extends JFrame {
 	public void setTable_1(JTable table_1) {
 		this.table_1 = table_1;
 	}
-	
-	
+
+	public JLabel getLblIcone() {
+		return lblIcone;
+	}
+
+	public JComboBox getEmpresa() {
+		return empresa;
+	}
+
+	public JSpinner getSpinner2() {
+		return spinner2;
+	}
 	
 }

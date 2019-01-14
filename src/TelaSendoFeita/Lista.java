@@ -22,6 +22,7 @@ import javax.swing.JComboBox;
 import javax.swing.JList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.DefaultComboBoxModel;
 
 public class Lista extends JFrame {
 
@@ -84,6 +85,7 @@ public class Lista extends JFrame {
 		));
 		
 		comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Banana", "Chinelo"}));
 		comboBox.setEditable(true);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(

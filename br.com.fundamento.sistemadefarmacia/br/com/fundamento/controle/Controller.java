@@ -6,8 +6,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.NumberFormat;
 
-import javax.swing.JTable;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 import br.com.fundamento.fachada.Fachada;
@@ -42,6 +43,10 @@ public class Controller {
 		controllerLogin();
 		
 		controllerListaFuncionario();
+		
+		controllerListaProduto();
+		
+		controllerVenda();
 
 	}
 
@@ -67,6 +72,7 @@ public class Controller {
 				tela.getTxtSenha().setVisible(true);
 				tela.getTextField().setVisible(true);
 				tela.getBtnEntrar().setVisible(true);
+				tela.getLblIcone().setVisible(true);
 
 				tela.getContentPane().setLayout(tela.getLoginTela());
 
@@ -117,10 +123,10 @@ public class Controller {
 				// 	tela.getTextField_8().setVisible(false);
 				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-				tela.getTextField_11().setVisible(false);
+//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				tela.getTextField_14().setVisible(false);
+				// tela.getTextField_14().setVisible(false);
 				// tela.getTextField_15().setVisible(false);
 				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
@@ -138,8 +144,10 @@ public class Controller {
 				tela.getComboBox_1().setVisible(false);
 				tela.getComboBox_2().setVisible(false);
 				tela.getComboBox_3().setVisible(false);
+				tela.getEmpresa().setVisible(false);
 
 				tela.getSpinner().setVisible(false);
+				tela.getSpinner2().setVisible(false);
 
 				tela.getTable().setVisible(false);
 				tela.getTable_0().setVisible(false);
@@ -166,7 +174,8 @@ public class Controller {
 				tela.getTxtSenha().setVisible(false);
 				tela.getTextField().setVisible(false);
 				tela.getBtnEntrar().setVisible(false);
-
+				tela.getLblIcone().setVisible(false);
+				
 				tela.getContentPane().setLayout(tela.getVendaTela());
 
 				tela.getLblCep().setVisible(false);
@@ -216,10 +225,10 @@ public class Controller {
 				//				tela.getTextField_8().setVisible(true);
 				//				tela.getTextField_9().setVisible(true);
 				tela.getTextField_10().setVisible(false);
-				tela.getTextField_11().setVisible(false);
+//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				tela.getTextField_14().setVisible(false);
+				// tela.getTextField_14().setVisible(false);
 				// tela.getTextField_15().setVisible(false);
 				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
@@ -237,8 +246,10 @@ public class Controller {
 				tela.getComboBox_1().setVisible(false);
 				tela.getComboBox_2().setVisible(true);
 				tela.getComboBox_3().setVisible(true);
+				tela.getEmpresa().setVisible(false);
 
 				tela.getSpinner().setVisible(true);
+				tela.getSpinner2().setVisible(false);
 
 				tela.getTable().setVisible(true);
 				tela.getTable_0().setVisible(false);
@@ -264,6 +275,7 @@ public class Controller {
 				tela.getTxtSenha().setVisible(false);
 				tela.getTextField().setVisible(false);
 				tela.getBtnEntrar().setVisible(false);
+				tela.getLblIcone().setVisible(false);
 
 				tela.getContentPane().setLayout(tela.getProdutoTela());
 
@@ -314,10 +326,10 @@ public class Controller {
 				// 				tela.getTextField_8().setVisible(false);
 				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(true);
-				tela.getTextField_11().setVisible(true);
+//				tela.getTextField_11().setVisible(true);
 				tela.getTextField_12().setVisible(true);
 				tela.getTextField_13().setVisible(true);
-				tela.getTextField_14().setVisible(true);
+//				tela.getTextField_14().setVisible(true);
 				// tela.getTextField_15().setVisible(false);
 				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
@@ -335,8 +347,10 @@ public class Controller {
 				tela.getComboBox_1().setVisible(false);
 				tela.getComboBox_2().setVisible(false);
 				tela.getComboBox_3().setVisible(false);
+				tela.getEmpresa().setVisible(true);
 
 				tela.getSpinner().setVisible(false);
+				tela.getSpinner2().setVisible(true);
 
 				tela.getTable().setVisible(false);
 				tela.getTable_0().setVisible(false);
@@ -362,6 +376,7 @@ public class Controller {
 				tela.getTxtSenha().setVisible(false);
 				tela.getTextField().setVisible(false);
 				tela.getBtnEntrar().setVisible(false);
+				tela.getLblIcone().setVisible(false);
 
 				tela.getContentPane().setLayout(tela.getFuncionarioCadastro());
 
@@ -412,10 +427,10 @@ public class Controller {
 				// 				tela.getTextField_8().setVisible(false);
 				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-				tela.getTextField_11().setVisible(false);
+//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				tela.getTextField_14().setVisible(false);
+				// tela.getTextField_14().setVisible(false);
 				// tela.getTextField_15().setVisible(false);
 				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
@@ -433,9 +448,11 @@ public class Controller {
 				tela.getComboBox_1().setVisible(false);
 				tela.getComboBox_2().setVisible(false);
 				tela.getComboBox_3().setVisible(false);
+				tela.getEmpresa().setVisible(false);
 
 				tela.getSpinner().setVisible(false);
-
+				tela.getSpinner2().setVisible(false);
+				
 				tela.getTable().setVisible(false);
 				tela.getTable_0().setVisible(false);
 				tela.getTable_1().setVisible(false);
@@ -460,6 +477,7 @@ public class Controller {
 				tela.getTxtSenha().setVisible(false);
 				tela.getTextField().setVisible(false);
 				tela.getBtnEntrar().setVisible(false);
+				tela.getLblIcone().setVisible(false);
 
 				tela.getContentPane().setLayout(tela.getListaProduto());
 
@@ -510,10 +528,10 @@ public class Controller {
 				// 				tela.getTextField_8().setVisible(false);
 				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-				tela.getTextField_11().setVisible(false);
+//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				tela.getTextField_14().setVisible(false);
+				// tela.getTextField_14().setVisible(false);
 				// tela.getTextField_15().setVisible(true);
 				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
@@ -531,8 +549,10 @@ public class Controller {
 				tela.getComboBox_1().setVisible(true);
 				tela.getComboBox_2().setVisible(false);
 				tela.getComboBox_3().setVisible(false);
+				tela.getEmpresa().setVisible(false);
 
 				tela.getSpinner().setVisible(false);
+				tela.getSpinner2().setVisible(false);
 
 				tela.getTable().setVisible(false);
 				tela.getTable_0().setVisible(true);
@@ -558,6 +578,7 @@ public class Controller {
 				tela.getTxtSenha().setVisible(false);
 				tela.getTextField().setVisible(false);
 				tela.getBtnEntrar().setVisible(false);
+				tela.getLblIcone().setVisible(false);
 
 				tela.getContentPane().setLayout(tela.getListaFuncionario());
 
@@ -608,10 +629,10 @@ public class Controller {
 				// 				tela.getTextField_8().setVisible(false);
 				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-				tela.getTextField_11().setVisible(false);
+//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				tela.getTextField_14().setVisible(false);
+				// tela.getTextField_14().setVisible(false);
 				// tela.getTextField_15().setVisible(false);
 				// tela.getTextField_16().setVisible(true);
 				tela.getTextField_17().setVisible(false);
@@ -629,8 +650,10 @@ public class Controller {
 				tela.getComboBox_1().setVisible(false);
 				tela.getComboBox_2().setVisible(false);
 				tela.getComboBox_3().setVisible(false);
+				tela.getEmpresa().setVisible(false);
 
 				tela.getSpinner().setVisible(false);
+				tela.getSpinner2().setVisible(false);
 
 				tela.getTable().setVisible(false);
 				tela.getTable_0().setVisible(false);
@@ -656,6 +679,7 @@ public class Controller {
 				tela.getTxtSenha().setVisible(false);
 				tela.getTextField().setVisible(false);
 				tela.getBtnEntrar().setVisible(false);
+				tela.getLblIcone().setVisible(false);
 
 				tela.getContentPane().setLayout(tela.getClienteTela());
 
@@ -706,10 +730,10 @@ public class Controller {
 				// 				tela.getTextField_8().setVisible(false);
 				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-				tela.getTextField_11().setVisible(false);
+//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				tela.getTextField_14().setVisible(false);
+				// tela.getTextField_14().setVisible(false);
 				// tela.getTextField_15().setVisible(false);
 				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(true);
@@ -727,8 +751,10 @@ public class Controller {
 				tela.getComboBox_1().setVisible(false);
 				tela.getComboBox_2().setVisible(false);
 				tela.getComboBox_3().setVisible(false);
+				tela.getEmpresa().setVisible(false);
 
 				tela.getSpinner().setVisible(false);
+				tela.getSpinner2().setVisible(false);
 
 				tela.getTable().setVisible(false);
 				tela.getTable_0().setVisible(false);
@@ -781,28 +807,57 @@ public class Controller {
 	}
 
 	public void controllerProduto() {
+		
+		tela.getMntmCadastrar().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Connection con = SQLConections.getInstance();
+
+				try {
+					PreparedStatement stm = con.prepareStatement(" SELECT fabricante FROM produto ");
+					final DefaultComboBoxModel combo = new DefaultComboBoxModel();
+
+					ResultSet rs = stm.executeQuery();
+
+					while (rs.next()) {
+						String fabricante = rs.getString("fabricante");
+
+						combo.addElement(fabricante);
+						tela.getEmpresa().setModel(combo);
+
+					}
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 
 		tela.getBtnCadastrar_1().addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
+
 				IFachada fachada1 = Fachada.getInstance();
 
 				Produto produto = new Produto();
 				produto.setNome(tela.getTextField_10().getText());
 				produto.setCodigo(tela.getTextField_25().getText());
-				produto.setFabricante(tela.getTextField_14().getText());
+				produto.setFabricante(tela.getEmpresa().getSelectedItem().toString());
 				produto.setFinalidade(tela.getTextField_12().getText());
 				produto.setPreco(Float.parseFloat(tela.getTextField_13().getText()));
 
 				Estoque estoque = new Estoque();
-				estoque.setQuantidade(Integer.parseInt(tela.getTextField_11().getText()));
+				estoque.setQuantidade((int) tela.getSpinner2().getValue());
 				estoque.setProdutos(produto);
 
 				fachada1.salvarEstoque(estoque);
 
 				Mensagem1.exibir("Cadastrado com Sucesso");
+
 			}
 		});
 
@@ -872,6 +927,7 @@ public class Controller {
 									tela.getTxtSenha().setVisible(false);
 									tela.getTextField().setVisible(false);
 									tela.getBtnEntrar().setVisible(false);
+									tela.getLblIcone().setVisible(false);
 
 									tela.getContentPane().setLayout(tela.getVendaTela());
 
@@ -922,10 +978,10 @@ public class Controller {
 									// tela.getTextField_8().setVisible(true);
 									// tela.getTextField_9().setVisible(true);
 									tela.getTextField_10().setVisible(false);
-									tela.getTextField_11().setVisible(false);
+//									tela.getTextField_11().setVisible(false);
 									tela.getTextField_12().setVisible(false);
 									tela.getTextField_13().setVisible(false);
-									tela.getTextField_14().setVisible(false);
+									// tela.getTextField_14().setVisible(false);
 									// tela.getTextField_15().setVisible(false);
 									// tela.getTextField_16().setVisible(false);
 									tela.getTextField_17().setVisible(false);
@@ -943,8 +999,10 @@ public class Controller {
 									tela.getComboBox_1().setVisible(false);
 									tela.getComboBox_2().setVisible(true);
 									tela.getComboBox_3().setVisible(true);
+									tela.getEmpresa().setVisible(false);
 
 									tela.getSpinner().setVisible(true);
+									tela.getSpinner2().setVisible(false);
 
 									tela.getTable().setVisible(true);
 									tela.getTable_0().setVisible(false);
@@ -969,6 +1027,7 @@ public class Controller {
 									tela.getTxtSenha().setVisible(false);
 									tela.getTextField().setVisible(false);
 									tela.getBtnEntrar().setVisible(false);
+									tela.getLblIcone().setVisible(false);
 
 									tela.getContentPane().setLayout(tela.getVendaTela());
 
@@ -1019,10 +1078,10 @@ public class Controller {
 									// tela.getTextField_8().setVisible(true);
 									// tela.getTextField_9().setVisible(true);
 									tela.getTextField_10().setVisible(false);
-									tela.getTextField_11().setVisible(false);
+//									tela.getTextField_11().setVisible(false);
 									tela.getTextField_12().setVisible(false);
 									tela.getTextField_13().setVisible(false);
-									tela.getTextField_14().setVisible(false);
+									// tela.getTextField_14().setVisible(false);
 									// tela.getTextField_15().setVisible(false);
 									// tela.getTextField_16().setVisible(false);
 									tela.getTextField_17().setVisible(false);
@@ -1042,6 +1101,7 @@ public class Controller {
 									tela.getComboBox_3().setVisible(true);
 
 									tela.getSpinner().setVisible(true);
+									tela.getSpinner2().setVisible(false);
 
 									tela.getTable().setVisible(true);
 									tela.getTable_0().setVisible(false);
@@ -1086,6 +1146,7 @@ public class Controller {
 				// TODO Auto-generated method stub
 				Connection con = SQLConections.getInstance();
 				
+				final DefaultComboBoxModel combo = new DefaultComboBoxModel();
 				final DefaultTableModel modelo = new DefaultTableModel(new Object[][] {{"ID", "Nome","CPF", "Função"}}, new String[] {"ID", "Nome", "CPF", "Função"});
 				try {
 					PreparedStatement stm = con
@@ -1098,8 +1159,10 @@ public class Controller {
 					            String nome = rs.getString("nome");
 					            String cpf = rs.getString("cpf");
 					            String funcao = rs.getString("funcao");
-					            modelo.addRow(new Object[]{Integer.toString(id), nome, cpf, funcao});			    		
-					    		tela.getTable_1().setModel(modelo);			    		
+					            modelo.addRow(new Object[]{Integer.toString(id), nome, cpf, funcao});
+					            combo.addElement(nome);
+					    		tela.getTable_1().setModel(modelo);	
+					    		tela.getComboBox().setModel(combo);
 					        }
 						
 					} catch (SQLException e1) {
@@ -1114,5 +1177,146 @@ public class Controller {
 			}
 		});
 		
+	}
+	
+	public void controllerListaProduto() {
+		tela.getMntmLista().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Connection con = SQLConections.getInstance();
+
+				NumberFormat formato = NumberFormat.getCurrencyInstance();
+
+				final DefaultComboBoxModel combo = new DefaultComboBoxModel();
+				
+				final DefaultTableModel modelo = new DefaultTableModel(
+						new Object[][] { { "ID", "Nome", "Codigo", "Fabricante", "Finalidade", "Preço" } },
+						new String[] { "ID", "Nome", "Codigo", "Fabricante", "Finalidade", "Preço" });
+				try {
+					PreparedStatement stm = con
+							.prepareStatement(" SELECT id, nome, codigo, fabricante, finalidade, preco FROM produto ");
+					try {
+						ResultSet rs = stm.executeQuery();
+
+						while (rs.next()) {
+							int id = rs.getInt("id");
+							String nome = rs.getString("nome");
+							String codigo = rs.getString("codigo");
+							String fabricante = rs.getString("fabricante");
+							String finalidade = rs.getString("finalidade");
+							double preco = rs.getDouble("preco");
+							modelo.addRow(new Object[] { Integer.toString(id), nome, codigo, fabricante, finalidade,
+									(formato.format(preco)) });
+				            combo.addElement(nome);
+							tela.getTable_0().setModel(modelo);	
+				    		tela.getComboBox_1().setModel(combo);
+				    		
+						}
+
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						Mensagem.exibir("Erro ao rs");
+					}
+
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					Mensagem.exibir("Erro ao statement");
+				}
+			}
+		});
+		tela.getBtnPesquisar().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	}
+
+	public void controllerVenda() {
+		
+		Connection con = SQLConections.getInstance();
+		
+		NumberFormat formato = NumberFormat.getCurrencyInstance();
+
+		final DefaultComboBoxModel combo = new DefaultComboBoxModel();
+		final DefaultComboBoxModel combo2 = new DefaultComboBoxModel();
+
+		try {
+			PreparedStatement stm = con
+					.prepareStatement(" SELECT nome FROM produto ");
+			PreparedStatement stm2 = con
+					.prepareStatement(" SELECT nome FROM cliente ");
+			try {
+				ResultSet rs = stm.executeQuery();
+				ResultSet rs2 = stm2.executeQuery();
+
+				while (rs.next()) {
+					String nome = rs.getString("nome");
+		            combo.addElement(nome);
+		    		tela.getComboBox_3().setModel(combo);
+		    	}
+				while (rs2.next()) {
+	    			String nome2 = rs2.getString("nome");
+		            combo2.addElement(nome2);
+		    		tela.getComboBox_2().setModel(combo2);
+				}
+
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				Mensagem.exibir("Erro ao rs");
+			}
+
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			Mensagem.exibir("Erro ao statement");
+		}
+		
+		tela.getMenuItem_8().addActionListener(new ActionListener() {
+						
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				Connection con = SQLConections.getInstance();
+				
+				NumberFormat formato = NumberFormat.getCurrencyInstance();
+
+				final DefaultComboBoxModel combo = new DefaultComboBoxModel();
+				final DefaultComboBoxModel combo2 = new DefaultComboBoxModel();
+
+				try {
+					PreparedStatement stm = con
+							.prepareStatement(" SELECT nome FROM produto ");
+					PreparedStatement stm2 = con
+							.prepareStatement(" SELECT nome FROM cliente ");
+					try {
+						ResultSet rs = stm.executeQuery();
+						ResultSet rs2 = stm2.executeQuery();
+
+						while (rs.next()) {
+							String nome = rs.getString("nome");
+				            combo.addElement(nome);
+				    		tela.getComboBox_3().setModel(combo);
+				    	}
+						while (rs2.next()) {
+			    			String nome2 = rs2.getString("nome");
+				            combo2.addElement(nome2);
+				    		tela.getComboBox_2().setModel(combo2);
+						}
+
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						Mensagem.exibir("Erro ao rs");
+					}
+
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					Mensagem.exibir("Erro ao statement");
+				}
+			}
+		});
 	}
 }
