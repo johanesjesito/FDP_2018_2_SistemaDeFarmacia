@@ -20,6 +20,7 @@ import javax.swing.JLabel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.Font;
+import javax.swing.JComboBox;
 
 public class Cliente extends JFrame {
 
@@ -28,13 +29,13 @@ public class Cliente extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField_17;
-	private JTextField textField_18;
-	private JTextField textField_19;
-	private JTextField textField_20;
-	private JTextField textField_21;
-	private JTextField textField_22;
-	private JTextField textField_26;
+	private JTextField txtCpf;
+	private JTextField txtNome_1;
+	private JTextField txtCidade;
+	private JTextField txtRua;
+	private JTextField txtCep;
+	private JTextField txtCep_1;
+	private JTextField txtNumero;
 
 	/**
 	 * Launch the application.
@@ -69,8 +70,8 @@ public class Cliente extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
-		textField_17 = new JTextField();
-		textField_17.setColumns(10);
+		txtCpf = new JTextField();
+		txtCpf.setColumns(10);
 		
 		JLabel lblNome_1 = new JLabel("Nome:");
 		lblNome_1.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -78,11 +79,11 @@ public class Cliente extends JFrame {
 		JLabel lblCpf_1 = new JLabel("CPF:");
 		lblCpf_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		textField_18 = new JTextField();
-		textField_18.setColumns(10);
+		txtNome_1 = new JTextField();
+		txtNome_1.setColumns(10);
 		
-		JButton btnCadastrar_3 = new JButton("Cadastrar");
-		btnCadastrar_3.setFont(new Font("Tahoma", Font.BOLD, 11));
+		JButton btnEditar_3 = new JButton("Editar");
+		btnEditar_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
 		JLabel lblCidade_1 = new JLabel("Cidade:");
 		lblCidade_1.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -90,14 +91,14 @@ public class Cliente extends JFrame {
 		JLabel lblRua_1 = new JLabel("Rua:");
 		lblRua_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		textField_19 = new JTextField();
-		textField_19.setColumns(10);
+		txtCidade = new JTextField();
+		txtCidade.setColumns(10);
 		
-		textField_20 = new JTextField();
-		textField_20.setColumns(10);
+		txtRua = new JTextField();
+		txtRua.setColumns(10);
 		
-		textField_21 = new JTextField();
-		textField_21.setColumns(10);
+		txtCep = new JTextField();
+		txtCep.setColumns(10);
 		
 		JLabel lblCep_2 = new JLabel("CEP:");
 		lblCep_2.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -105,17 +106,20 @@ public class Cliente extends JFrame {
 		JLabel lblCep_3 = new JLabel("CEP:");
 		lblCep_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		textField_22 = new JTextField();
-		textField_22.setColumns(10);
-		
-		JLabel lblCliente = new JLabel("Cliente");
-		lblCliente.setFont(new Font("Tahoma", Font.BOLD, 18));
+		txtCep_1 = new JTextField();
+		txtCep_1.setColumns(10);
 		
 		JLabel lblNumero_1 = new JLabel("Numero:");
 		lblNumero_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
-		textField_26 = new JTextField();
-		textField_26.setColumns(10);
+		txtNumero = new JTextField();
+		txtNumero.setColumns(10);
+		
+		JLabel lblCliente = new JLabel("Cliente:");
+		lblCliente.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		JComboBox comboCliente = new JComboBox();
+		comboCliente.setEditable(true);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -123,77 +127,79 @@ public class Cliente extends JFrame {
 					.addGap(37)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 						.addComponent(lblCep_2)
-						.addComponent(lblNome_1)
-						.addComponent(lblRua_1))
+						.addComponent(lblRua_1)
+						.addComponent(lblCliente)
+						.addComponent(lblNome_1))
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(textField_22, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
-						.addComponent(textField_18, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
-						.addComponent(textField_20, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
-					.addGap(11)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addComponent(lblCep_3)
-						.addComponent(lblCidade_1)
-						.addComponent(lblCpf_1))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(textField_17, 187, 187, 187)
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-							.addComponent(textField_21, Alignment.TRAILING)
-							.addComponent(textField_19, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 187, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(txtCep_1, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+								.addComponent(txtNome_1, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+								.addComponent(txtRua, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+							.addGap(11)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+								.addComponent(lblCep_3)
+								.addComponent(lblCidade_1)
+								.addComponent(lblCpf_1))
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(txtCpf, 187, 187, 187)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+									.addComponent(txtCep, Alignment.TRAILING)
+									.addComponent(txtCidade, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 187, GroupLayout.PREFERRED_SIZE))))
+						.addComponent(comboCliente, 0, 412, Short.MAX_VALUE))
 					.addGap(89))
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(251)
-					.addComponent(lblCliente)
-					.addContainerGap(270, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(236)
-					.addComponent(btnCadastrar_3)
+					.addComponent(btnEditar_3)
 					.addContainerGap(259, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(173)
 					.addComponent(lblNumero_1)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(textField_26, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(237, Short.MAX_VALUE))
+					.addComponent(txtNumero, GroupLayout.PREFERRED_SIZE, 129, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(231, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(45)
-					.addComponent(lblCliente)
-					.addGap(41)
+					.addGap(58)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblCliente)
+						.addComponent(comboCliente, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addGap(36)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField_17, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(txtCpf, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 								.addComponent(lblCpf_1))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(lblCidade_1)
-								.addComponent(textField_19, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addComponent(txtCidade, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField_21, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(txtCep, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 								.addComponent(lblCep_2)))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField_18, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(txtNome_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 								.addComponent(lblNome_1))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField_20, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(txtRua, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 								.addComponent(lblRua_1))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField_22, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(txtCep_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 								.addComponent(lblCep_3))))
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblNumero_1)
-						.addComponent(textField_26, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(txtNumero, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(28)
-					.addComponent(btnCadastrar_3)
+					.addComponent(btnEditar_3)
 					.addGap(40))
 		);
 		contentPane.setLayout(gl_contentPane);

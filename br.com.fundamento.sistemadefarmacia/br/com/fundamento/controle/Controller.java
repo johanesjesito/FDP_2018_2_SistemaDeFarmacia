@@ -119,16 +119,9 @@ public class Controller {
 				tela.getTextField_4().setVisible(false);
 				tela.getTextField_5().setVisible(false);
 				tela.getTextField_6().setVisible(false);
-				tela.getTextField_7().setVisible(false);
-				// 	tela.getTextField_8().setVisible(false);
-				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				// tela.getTextField_14().setVisible(false);
-				// tela.getTextField_15().setVisible(false);
-				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
 				tela.getTextField_18().setVisible(false);
 				tela.getTextField_19().setVisible(false);
@@ -222,15 +215,9 @@ public class Controller {
 				tela.getTextField_5().setVisible(false);
 				tela.getTextField_6().setVisible(false);
 				tela.getTextField_7().setVisible(false);
-				//				tela.getTextField_8().setVisible(true);
-				//				tela.getTextField_9().setVisible(true);
 				tela.getTextField_10().setVisible(false);
-//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				// tela.getTextField_14().setVisible(false);
-				// tela.getTextField_15().setVisible(false);
-				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
 				tela.getTextField_18().setVisible(false);
 				tela.getTextField_19().setVisible(false);
@@ -323,15 +310,9 @@ public class Controller {
 				tela.getTextField_5().setVisible(false);
 				tela.getTextField_6().setVisible(false);
 				tela.getTextField_7().setVisible(false);
-				// 				tela.getTextField_8().setVisible(false);
-				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(true);
-//				tela.getTextField_11().setVisible(true);
 				tela.getTextField_12().setVisible(true);
 				tela.getTextField_13().setVisible(true);
-//				tela.getTextField_14().setVisible(true);
-				// tela.getTextField_15().setVisible(false);
-				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
 				tela.getTextField_18().setVisible(false);
 				tela.getTextField_19().setVisible(false);
@@ -424,15 +405,9 @@ public class Controller {
 				tela.getTextField_5().setVisible(true);
 				tela.getTextField_6().setVisible(true);
 				tela.getTextField_7().setVisible(true);
-				// 				tela.getTextField_8().setVisible(false);
-				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				// tela.getTextField_14().setVisible(false);
-				// tela.getTextField_15().setVisible(false);
-				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
 				tela.getTextField_18().setVisible(false);
 				tela.getTextField_19().setVisible(false);
@@ -525,15 +500,9 @@ public class Controller {
 				tela.getTextField_5().setVisible(false);
 				tela.getTextField_6().setVisible(false);
 				tela.getTextField_7().setVisible(false);
-				// 				tela.getTextField_8().setVisible(false);
-				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				// tela.getTextField_14().setVisible(false);
-				// tela.getTextField_15().setVisible(true);
-				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(false);
 				tela.getTextField_18().setVisible(false);
 				tela.getTextField_19().setVisible(false);
@@ -626,15 +595,9 @@ public class Controller {
 				tela.getTextField_5().setVisible(false);
 				tela.getTextField_6().setVisible(false);
 				tela.getTextField_7().setVisible(false);
-				// 				tela.getTextField_8().setVisible(false);
-				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				// tela.getTextField_14().setVisible(false);
-				// tela.getTextField_15().setVisible(false);
-				// tela.getTextField_16().setVisible(true);
 				tela.getTextField_17().setVisible(false);
 				tela.getTextField_18().setVisible(false);
 				tela.getTextField_19().setVisible(false);
@@ -727,15 +690,9 @@ public class Controller {
 				tela.getTextField_5().setVisible(false);
 				tela.getTextField_6().setVisible(false);
 				tela.getTextField_7().setVisible(false);
-				// 				tela.getTextField_8().setVisible(false);
-				// tela.getTextField_9().setVisible(false);
 				tela.getTextField_10().setVisible(false);
-//				tela.getTextField_11().setVisible(false);
 				tela.getTextField_12().setVisible(false);
 				tela.getTextField_13().setVisible(false);
-				// tela.getTextField_14().setVisible(false);
-				// tela.getTextField_15().setVisible(false);
-				// tela.getTextField_16().setVisible(false);
 				tela.getTextField_17().setVisible(true);
 				tela.getTextField_18().setVisible(true);
 				tela.getTextField_19().setVisible(true);
@@ -975,15 +932,9 @@ public class Controller {
 									tela.getTextField_5().setVisible(false);
 									tela.getTextField_6().setVisible(false);
 									tela.getTextField_7().setVisible(false);
-									// tela.getTextField_8().setVisible(true);
-									// tela.getTextField_9().setVisible(true);
 									tela.getTextField_10().setVisible(false);
-//									tela.getTextField_11().setVisible(false);
 									tela.getTextField_12().setVisible(false);
 									tela.getTextField_13().setVisible(false);
-									// tela.getTextField_14().setVisible(false);
-									// tela.getTextField_15().setVisible(false);
-									// tela.getTextField_16().setVisible(false);
 									tela.getTextField_17().setVisible(false);
 									tela.getTextField_18().setVisible(false);
 									tela.getTextField_19().setVisible(false);
@@ -1075,15 +1026,9 @@ public class Controller {
 									tela.getTextField_5().setVisible(false);
 									tela.getTextField_6().setVisible(false);
 									tela.getTextField_7().setVisible(false);
-									// tela.getTextField_8().setVisible(true);
-									// tela.getTextField_9().setVisible(true);
 									tela.getTextField_10().setVisible(false);
-//									tela.getTextField_11().setVisible(false);
 									tela.getTextField_12().setVisible(false);
 									tela.getTextField_13().setVisible(false);
-									// tela.getTextField_14().setVisible(false);
-									// tela.getTextField_15().setVisible(false);
-									// tela.getTextField_16().setVisible(false);
 									tela.getTextField_17().setVisible(false);
 									tela.getTextField_18().setVisible(false);
 									tela.getTextField_19().setVisible(false);
@@ -1244,6 +1189,7 @@ public class Controller {
 
 		final DefaultComboBoxModel combo = new DefaultComboBoxModel();
 		final DefaultComboBoxModel combo2 = new DefaultComboBoxModel();
+		final DefaultTableModel modelo = new DefaultTableModel(new Object[][] {{"Produto","Quantidade", "Preco"}}, new String[] {"Produto", "Quantidade", "Preco"});					
 
 		try {
 			PreparedStatement stm = con
@@ -1280,12 +1226,6 @@ public class Controller {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				Connection con = SQLConections.getInstance();
-				
-				NumberFormat formato = NumberFormat.getCurrencyInstance();
-
-				final DefaultComboBoxModel combo = new DefaultComboBoxModel();
-				final DefaultComboBoxModel combo2 = new DefaultComboBoxModel();
 
 				try {
 					PreparedStatement stm = con
@@ -1316,6 +1256,37 @@ public class Controller {
 					// TODO Auto-generated catch block
 					Mensagem.exibir("Erro ao statement");
 				}
+			}
+		});
+
+		tela.getBtnAdicionar().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+//				PreparedStatement stm = con
+//						.prepareStatement(" SELECT nome, estoque, quantidade FROM produto, estoque ");
+//				ResultSet rs = stm.executeQuery();
+//
+//				while (rs.next()) {
+//					String nome = rs.getString("nome");
+//					int estoque = rs.getInt("estoque");
+//					int quantidade = rs.getInt("quantidade");
+//					
+//					if()	{
+//						modelo.addRow(new Object[]{});
+//					}
+//					tela.getTable().setModel(modelo);
+//				}
+			}
+		});
+		
+		tela.getBtnComprar().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
 			}
 		});
 	}

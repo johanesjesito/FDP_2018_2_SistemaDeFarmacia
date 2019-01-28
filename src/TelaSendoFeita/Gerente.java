@@ -20,6 +20,7 @@ import javax.swing.JLabel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
 import java.awt.Font;
+import javax.swing.JComboBox;
 
 public class Gerente extends JFrame {
 
@@ -117,14 +118,8 @@ public class Gerente extends JFrame {
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);
 		
-		JButton btnCadastrar = new JButton("Cadastrar");
-		btnCadastrar.setFont(new Font("Tahoma", Font.BOLD, 11));
-		
-		JLabel lblFuncionario = new JLabel("Funcionario");
-		lblFuncionario.setFont(new Font("Tahoma", Font.BOLD, 18));
-		
-		JLabel lblEndereo = new JLabel("Endere\u00E7o");
-		lblEndereo.setFont(new Font("Tahoma", Font.BOLD, 18));
+		JButton btnEditar_1 = new JButton("Editar");
+		btnEditar_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		
 		JLabel lblCidade = new JLabel("Cidade:");
 		lblCidade.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -161,27 +156,27 @@ public class Gerente extends JFrame {
 		
 		textField_9 = new JTextField();
 		textField_9.setColumns(10);
+		
+		JLabel lblFuncionario = new JLabel("Funcionario:");
+		lblFuncionario.setFont(new Font("Tahoma", Font.BOLD, 11));
+		
+		JComboBox comboFuncionario = new JComboBox();
+		comboFuncionario.setEditable(true);
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(130, Short.MAX_VALUE)
-					.addComponent(lblFuncionario, GroupLayout.PREFERRED_SIZE, 170, GroupLayout.PREFERRED_SIZE)
-					.addGap(86)
-					.addComponent(lblEndereo)
-					.addGap(113))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(36)
+					.addGap(33)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-						.addComponent(btnCadastrar)
+						.addComponent(lblCpf)
+						.addComponent(lblNome)
+						.addComponent(lblSenha)
+						.addComponent(lblLogin)
+						.addComponent(lblFuno)
+						.addComponent(lblFuncionario))
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-								.addComponent(lblCpf)
-								.addComponent(lblNome)
-								.addComponent(lblSenha)
-								.addComponent(lblLogin)
-								.addComponent(lblFuno))
-							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
 								.addComponent(textField_8)
 								.addComponent(textField)
@@ -190,27 +185,32 @@ public class Gerente extends JFrame {
 								.addComponent(textField_4))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
-								.addComponent(lblCep)
+								.addComponent(lblNumero)
 								.addComponent(lblCidade)
+								.addComponent(lblCep)
 								.addComponent(lblRua)
-								.addComponent(lblCep_1)
-								.addComponent(lblNumero))))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addComponent(textField_9)
-						.addComponent(textField_7)
-						.addComponent(textField_5)
-						.addComponent(textField_6, Alignment.TRAILING)
-						.addComponent(textField_2, GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))
-					.addContainerGap(63, Short.MAX_VALUE))
+								.addComponent(lblCep_1))
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
+								.addComponent(textField_9)
+								.addComponent(textField_7)
+								.addComponent(textField_5)
+								.addComponent(textField_6, Alignment.TRAILING)
+								.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 187, GroupLayout.PREFERRED_SIZE)))
+						.addComponent(comboFuncionario, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+					.addContainerGap(40, Short.MAX_VALUE))
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addContainerGap(279, Short.MAX_VALUE)
+					.addComponent(btnEditar_1)
+					.addGap(240))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(19)
+					.addGap(35)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblFuncionario, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblEndereo))
+						.addComponent(lblFuncionario)
+						.addComponent(comboFuncionario, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
@@ -233,29 +233,29 @@ public class Gerente extends JFrame {
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(lblFuno)
 								.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblCidade)
-								.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblCep))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblRua)
-								.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblCep_1)
-								.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNumero))))
-					.addGap(33)
-					.addComponent(btnCadastrar)
-					.addGap(44))
+						.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+							.addGroup(gl_contentPane.createSequentialGroup()
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+									.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+									.addComponent(lblCidade))
+								.addPreferredGap(ComponentPlacement.RELATED)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+									.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+									.addComponent(lblCep))
+								.addPreferredGap(ComponentPlacement.RELATED)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+									.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+									.addComponent(lblRua))
+								.addPreferredGap(ComponentPlacement.RELATED)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+									.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+									.addComponent(lblCep_1))
+								.addPreferredGap(ComponentPlacement.RELATED)
+								.addComponent(textField_9, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addComponent(lblNumero)))
+					.addGap(18)
+					.addComponent(btnEditar_1)
+					.addGap(53))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
